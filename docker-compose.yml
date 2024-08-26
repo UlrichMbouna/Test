@@ -1,0 +1,7 @@
+version: '3.8'
+services:
+app:
+  buil:
+  ports:
+    -"8080:8081"
+    restart: always
