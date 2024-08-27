@@ -17,12 +17,12 @@ public class CsvToJsonController {
     @Autowired
     private CsvToJsonService csvToJsonService;
 
-    @PostMapping("/CsvForJson")
+    @PostMapping("/csv-for-json")
     public String convertCsvToJson(@RequestParam("file") MultipartFile file) throws IOException, CsvException {
         return csvToJsonService.convertCsvToJson(file);
     }
 
-     @PostMapping("/JsonForCsv")
+     @PostMapping("/json-for-csv")
     public ResponseEntity<String> convertJsonToCsv(@RequestParam("file") MultipartFile file) throws IOException {
         String json = new String(file.getBytes());
         String csv = csvToJsonService.convertJsonToCsv(json);
