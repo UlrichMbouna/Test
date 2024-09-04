@@ -1,5 +1,7 @@
 package ulrich_tech.csvforjson.Model;
 
+
+//package utilitaire fontion
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,10 +11,15 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Division {
+public class ModelVersion {   
+   
     private String model;
     private String version;
-    private String startyear;
-    private String endyear;
+    private int startYear;  
+    private int endYear;  
+
+    public ModelVersion(String b1, String b2, String d1, String d2) {
+        
+    }
 }
 

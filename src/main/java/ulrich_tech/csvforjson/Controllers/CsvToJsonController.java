@@ -1,8 +1,9 @@
 package ulrich_tech.csvforjson.Controllers;
+// controller en minuscule
 
-import ulrich_tech.csvforjson.Model.Division;
+import ulrich_tech.csvforjson.Model.ModelVersion;
 import ulrich_tech.csvforjson.Services.CsvToJsonService;
-import ulrich_tech.csvforjson.Services.DivisionService;
+import ulrich_tech.csvforjson.Services.ModelVersionService;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.opencsv.exceptions.CsvException;
@@ -16,21 +17,17 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-//@RequestMapping("/api/csv")
+@RequestMapping("/api")
 public class CsvToJsonController {
 
     @Autowired
     private CsvToJsonService csvToJsonService;
     @Autowired
-    private DivisionService divisionService;
+    private ModelVersionService modelVersionService;
 
     @PostMapping("/csv-for-json")
     public String convertCsvToJson(@RequestParam("file") MultipartFile file) throws IOException, CsvException {
         return csvToJsonService.convertCsvToJson(file);
-    }
-    @GetMapping("/division")
-    public Division getDivision(@RequestParam String text) {
-        return divisionService.diviser(text);
     }
      
 
@@ -46,8 +43,8 @@ public class CsvToJsonController {
         return ResponseEntity.ok().headers(headers).body(csv);
     }
 
-    @GetMapping("/diviser-Liste")
-    public List<Division> diviserListe(@RequestBody JsonNode jsonNode){
-        return divisionService.diviserListe(jsonNode);
+    @GetMapping("/model-version")
+    public List<ModelVersion> diviserListe(@RequestBody JsonNode jsonNode){
+        return modelVersionService.Liste(jsonNode);
     }
 }
