@@ -1,5 +1,126 @@
-Name,Age,City
-John Doe,30,New York
-Jane Smith,25,Los Angeles
-Alice Johnson,35,Chicago
-Bob Brown,40,Houston
+model,version,startYear,endYear
+02,Berline (E10),1966,1977
+02,Cabriolet (E10),1967,1975
+02,Touring (E6),1971,1975
+340,Berline,1950,1955
+501/3,,1952,1959
+502,Berline,1954,1963
+503,Decapotable,1957,1961
+507,Cabriolet,1956,1959
+600,(111),1957,1961
+700,(107),1959,1966
+700,Coupe,1959,1964
+1500-2000,"(115, 116, 118, 121)",1962,1972
+1600,GT Coupe,1967,1969
+2600-3200,V8 Coupe,1958,1966
+2500-3300,(E3) Berline,1968,1977
+2000-3200,(E9) Coupe,1965,1976
+Glas,(602),1967,1968
+i3,(I01),2013,N/A
+i4,(G26),2021,N/A
+i8,(I12),2014,N/A
+i8,Roadster (I15),2018,N/A
+Isetta,"(100, 101, 102, 103)",1956,1963
+iX,(I20),2021,N/A
+iX3,(G08),2020,N/A
+M1,(E26),1979,1983
+1,3 portes (E81),2006,2011
+1,3 portes (F21),2011,N/A
+1,3/5 portes (F40),2019,N/A
+1,5 portes (E87),2003,2013
+1,5 portes (F20),2010,2019
+1,Berline (F52),2017,N/A
+1,Cabriolet (E88),2008,2013
+1,Coupe (E82),2006,2013
+2,Active Tourer (F45),2013,N/A
+2,Active Tourer (U06),2021,N/A
+2,Cabriolet (F23),2014,N/A
+2,"Coupe (F22, F87)",2012,N/A
+2,Coupe (G42),2021,N/A
+2,Gran Coupe (F44),2019,N/A
+2,Gran Tourer (F46),2014,N/A
+3,Berline (E21),1975,1984
+3,Berline (E30),1982,1992
+3,Berline (E36),1990,1998
+3,Berline (E46),1998,2005
+3,Berline (E90),2004,2011
+3,"Berline (F30, F80)",2011,2018
+3,Berline (G20),2018,N/A
+3,Berline (G28),2018,N/A
+3,Cabriolet (E30),1985,1993
+3,Cabriolet (E36),1993,1999
+3,Cabriolet (E46),2000,2007
+3,Cabriolet (E93),2006,2013
+3,Compact (E36),1994,2000
+3,Compact (E46),2001,2005
+3,Coupe (E36),1992,1999
+3,Coupe (E46),1999,2006
+3,Coupe (E92),2005,2013
+3,GT (F34),2012,N/A
+3,Touring (E30),1987,1994
+3,Touring (E36),1995,1999
+3,Touring (E46),1999,2005
+3,Touring (E91),2004,2012
+3,Touring (F31),2011,2019
+3,Touring (G21),2019,N/A
+4,"Cabriolet (F33, F83)",2013,N/A
+4,Cabriolet (G23),2020,N/A
+4,"Coupe (F32, F82)",2013,N/A
+4,"Coupe (G22, G82)",2020,N/A
+4,Gran Coupe (F36),2014,N/A
+4,Gran Coupe (G26),2021,N/A
+5,Berline (E12),1972,1981
+5,Berline (E28),1980,1987
+5,Berline (E34),1987,1995
+5,Berline (E39),1995,2003
+5,Berline (E60),2001,2010
+5,Berline (F10),2009,2016
+5,"Berline (G30, F90)",2016,N/A
+5,GT (F07),2009,2017
+5,Touring (E34),1991,1997
+5,Touring (E39),1996,2004
+5,Touring (E61),2004,2010
+5,Touring (F11),2009,2017
+5,Touring (G31),2017,N/A
+6,Cabriolet (E64),2004,2010
+6,Cabriolet (F12),2011,2018
+6,Coupe (E24),1975,1989
+6,Coupe (E63),2004,2010
+6,Coupe (F13),2010,2017
+6,Gran Coupe (F06),2011,2018
+6,Gran Turismo (G32),2017,N/A
+7,(E23),1977,1988
+7,(E32),1986,1994
+7,(E38),1994,2001
+7,"(E65, E66, E67)",2001,2009
+7,"(F01, F02, F03, F04)",2008,2015
+7,"(G11, G12)",2014,N/A
+7,(G70),2022,N/A
+8,(E31),1990,1999
+8,"Cabriolet (G14, F91)",2018,N/A
+8,"Coupe (G15, F92)",2018,N/A
+8,"Gran Coupe (G16, F93)",2019,N/A
+X1,(E84),2009,2015
+X1,(F48),2014,N/A
+X2,(F39),2017,N/A
+X3,(E83),2003,2011
+X3,(F25),2010,2017
+X3,"(G01, F97)",2017,N/A
+X4,(F26),2013,2018
+X4,"(G02, F98)",2018,N/A
+X5,(E53),2000,2007
+X5,(E70),2006,2013
+X5,"(F15, F85)",2012,2018
+X5,(G05),2018,N/A
+X6,"(E71, E72)",2007,2014
+X6,"(F16, F86)",2014,2019
+X6,"(G06, F96)",2019,N/A
+X7,(G07),2019,N/A
+Z1,Roadster (E30),1988,1991
+Z3,Coupe (E36),1997,2003
+Z3,Roadster (E36),1995,2003
+Z4,Coupe (E86),2006,2009
+Z4,Roadster (E85),2003,2009
+Z4,Roadster (E89),2009,2016
+Z4,Roadster (G29),2019,N/A
+Z8,Roadster (E52),2000,2003

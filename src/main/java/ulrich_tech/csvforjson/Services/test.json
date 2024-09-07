@@ -1,4 +1,752 @@
 [
-    {"name": "John Doe", "email": "john.doe@example.com", "age": "28"},
-    {"name": "Jane Smith", "email": "jane.smith@example.com", "age": "34"}
+    {
+        "model": "02",
+        "version": "Berline (E10)",
+        "startYear": "1966",
+        "endYear": "1977"
+    },
+    {
+        "model": "02",
+        "version": "Cabriolet (E10)",
+        "startYear": "1967",
+        "endYear": "1975"
+    },
+    {
+        "model": "02",
+        "version": "Touring (E6)",
+        "startYear": "1971",
+        "endYear": "1975"
+    },
+    {
+        "model": "340",
+        "version": "Berline",
+        "startYear": "1950",
+        "endYear": "1955"
+    },
+    {
+        "model": "501/3",
+        "version": "",
+        "startYear": "1952",
+        "endYear": "1959"
+    },
+    {
+        "model": "502",
+        "version": "Berline",
+        "startYear": "1954",
+        "endYear": "1963"
+    },
+    {
+        "model": "503",
+        "version": "Décapotable",
+        "startYear": "1957",
+        "endYear": "1961"
+    },
+    {
+        "model": "507",
+        "version": "Cabriolet",
+        "startYear": "1956",
+        "endYear": "1959"
+    },
+    {
+        "model": "600",
+        "version": "(111)",
+        "startYear": "1957",
+        "endYear": "1961"
+    },
+    {
+        "model": "700",
+        "version": "(107)",
+        "startYear": "1959",
+        "endYear": "1966"
+    },
+    {
+        "model": "700",
+        "version": "Coupé",
+        "startYear": "1959",
+        "endYear": "1964"
+    },
+    {
+        "model": "1500-2000",
+        "version": "(115, 116, 118, 121)",
+        "startYear": "1962",
+        "endYear": "1972"
+    },
+    {
+        "model": "1600",
+        "version": "GT Coupé",
+        "startYear": "1967",
+        "endYear": "1969"
+    },
+    {
+        "model": "2600-3200",
+        "version": "V8 Coupe",
+        "startYear": "1958",
+        "endYear": "1966"
+    },
+    {
+        "model": "2500-3300",
+        "version": "(E3) Berline",
+        "startYear": "1968",
+        "endYear": "1977"
+    },
+    {
+        "model": "2000-3200",
+        "version": "(E9) Coupe",
+        "startYear": "1965",
+        "endYear": "1976"
+    },
+    {
+        "model": "Glas",
+        "version": "(602)",
+        "startYear": "1967",
+        "endYear": "1968"
+    },
+    {
+        "model": "i3",
+        "version": "(I01)",
+        "startYear": "2013",
+        "endYear": "N/A"
+    },
+    {
+        "model": "i4",
+        "version": "(G26)",
+        "startYear": "2021",
+        "endYear": "N/A"
+    },
+    {
+        "model": "i8",
+        "version": "(I12)",
+        "startYear": "2014",
+        "endYear": "N/A"
+    },
+    {
+        "model": "i8",
+        "version": "Roadster (I15)",
+        "startYear": "2018",
+        "endYear": "N/A"
+    },
+    {
+        "model": "Isetta",
+        "version": "(100, 101, 102, 103)",
+        "startYear": "1956",
+        "endYear": "1963"
+    },
+    {
+        "model": "iX",
+        "version": "(I20)",
+        "startYear": "2021",
+        "endYear": "N/A"
+    },
+    {
+        "model": "iX3",
+        "version": "(G08)",
+        "startYear": "2020",
+        "endYear": "N/A"
+    },
+    {
+        "model": "M1",
+        "version": "(E26)",
+        "startYear": "1979",
+        "endYear": "1983"
+    },
+    {
+        "model": "1",
+        "version": "3 portes (E81)",
+        "startYear": "2006",
+        "endYear": "2011"
+    },
+    {
+        "model": "1",
+        "version": "3 portes (F21)",
+        "startYear": "2011",
+        "endYear": "N/A"
+    },
+    {
+        "model": "1",
+        "version": "3/5 portes (F40)",
+        "startYear": "2019",
+        "endYear": "N/A"
+    },
+    {
+        "model": "1",
+        "version": "5 portes (E87)",
+        "startYear": "2003",
+        "endYear": "2013"
+    },
+    {
+        "model": "1",
+        "version": "5 portes (F20)",
+        "startYear": "2010",
+        "endYear": "2019"
+    },
+    {
+        "model": "1",
+        "version": "Berline (F52)",
+        "startYear": "2017",
+        "endYear": "N/A"
+    },
+    {
+        "model": "1",
+        "version": "Cabriolet (E88)",
+        "startYear": "2008",
+        "endYear": "2013"
+    },
+    {
+        "model": "1",
+        "version": "Coupe (E82)",
+        "startYear": "2006",
+        "endYear": "2013"
+    },
+    {
+        "model": "2",
+        "version": "Active Tourer (F45)",
+        "startYear": "2013",
+        "endYear": "N/A"
+    },
+    {
+        "model": "2",
+        "version": "Active Tourer (U06)",
+        "startYear": "2021",
+        "endYear": "N/A"
+    },
+    {
+        "model": "2",
+        "version": "Cabriolet (F23)",
+        "startYear": "2014",
+        "endYear": "N/A"
+    },
+    {
+        "model": "2",
+        "version": "Coupe (F22, F87)",
+        "startYear": "2012",
+        "endYear": "N/A"
+    },
+    {
+        "model": "2",
+        "version": "Coupé (G42)",
+        "startYear": "2021",
+        "endYear": "N/A"
+    },
+    {
+        "model": "2",
+        "version": "Gran Coupe (F44)",
+        "startYear": "2019",
+        "endYear": "N/A"
+    },
+    {
+        "model": "2",
+        "version": "Gran Tourer (F46)",
+        "startYear": "2014",
+        "endYear": "N/A"
+    },
+    {
+        "model": "3",
+        "version": "Berline (E21)",
+        "startYear": "1975",
+        "endYear": "1984"
+    },
+    {
+        "model": "3",
+        "version": "Berline (E30)",
+        "startYear": "1982",
+        "endYear": "1992"
+    },
+    {
+        "model": "3",
+        "version": "Berline (E36)",
+        "startYear": "1990",
+        "endYear": "1998"
+    },
+    {
+        "model": "3",
+        "version": "Berline (E46)",
+        "startYear": "1998",
+        "endYear": "2005"
+    },
+    {
+        "model": "3",
+        "version": "Berline (E90)",
+        "startYear": "2004",
+        "endYear": "2011"
+    },
+    {
+        "model": "3",
+        "version": "Berline (F30, F80)",
+        "startYear": "2011",
+        "endYear": "2018"
+    },
+    {
+        "model": "3",
+        "version": "Berline (G20)",
+        "startYear": "2018",
+        "endYear": "N/A"
+    },
+    {
+        "model": "3",
+        "version": "Berline (G28)",
+        "startYear": "2018",
+        "endYear": "N/A"
+    },
+    {
+        "model": "3",
+        "version": "Cabriolet (E30)",
+        "startYear": "1985",
+        "endYear": "1993"
+    },
+    {
+        "model": "3",
+        "version": "Cabriolet (E36)",
+        "startYear": "1993",
+        "endYear": "1999"
+    },
+    {
+        "model": "3",
+        "version": "Cabriolet (E46)",
+        "startYear": "2000",
+        "endYear": "2007"
+    },
+    {
+        "model": "3",
+        "version": "Cabriolet (E93)",
+        "startYear": "2006",
+        "endYear": "2013"
+    },
+    {
+        "model": "3",
+        "version": "Compact (E36)",
+        "startYear": "1994",
+        "endYear": "2000"
+    },
+    {
+        "model": "3",
+        "version": "Compact (E46)",
+        "startYear": "2001",
+        "endYear": "2005"
+    },
+    {
+        "model": "3",
+        "version": "Coupe (E36)",
+        "startYear": "1992",
+        "endYear": "1999"
+    },
+    {
+        "model": "3",
+        "version": "Coupe (E46)",
+        "startYear": "1999",
+        "endYear": "2006"
+    },
+    {
+        "model": "3",
+        "version": "Coupe (E92)",
+        "startYear": "2005",
+        "endYear": "2013"
+    },
+    {
+        "model": "3",
+        "version": "GT (F34)",
+        "startYear": "2012",
+        "endYear": "N/A"
+    },
+    {
+        "model": "3",
+        "version": "Touring (E30)",
+        "startYear": "1987",
+        "endYear": "1994"
+    },
+    {
+        "model": "3",
+        "version": "Touring (E36)",
+        "startYear": "1995",
+        "endYear": "1999"
+    },
+    {
+        "model": "3",
+        "version": "Touring (E46)",
+        "startYear": "1999",
+        "endYear": "2005"
+    },
+    {
+        "model": "3",
+        "version": "Touring (E91)",
+        "startYear": "2004",
+        "endYear": "2012"
+    },
+    {
+        "model": "3",
+        "version": "Touring (F31)",
+        "startYear": "2011",
+        "endYear": "2019"
+    },
+    {
+        "model": "3",
+        "version": "Touring (G21)",
+        "startYear": "2019",
+        "endYear": "N/A"
+    },
+    {
+        "model": "4",
+        "version": "Cabriolet (F33, F83)",
+        "startYear": "2013",
+        "endYear": "N/A"
+    },
+    {
+        "model": "4",
+        "version": "Cabriolet (G23)",
+        "startYear": "2020",
+        "endYear": "N/A"
+    },
+    {
+        "model": "4",
+        "version": "Coupe (F32, F82)",
+        "startYear": "2013",
+        "endYear": "N/A"
+    },
+    {
+        "model": "4",
+        "version": "Coupe (G22, G82)",
+        "startYear": "2020",
+        "endYear": "N/A"
+    },
+    {
+        "model": "4",
+        "version": "Gran Coupe (F36)",
+        "startYear": "2014",
+        "endYear": "N/A"
+    },
+    {
+        "model": "4",
+        "version": "Gran Coupé (G26)",
+        "startYear": "2021",
+        "endYear": "N/A"
+    },
+    {
+        "model": "5",
+        "version": "Berline (E12)",
+        "startYear": "1972",
+        "endYear": "1981"
+    },
+    {
+        "model": "5",
+        "version": "Berline (E28)",
+        "startYear": "1980",
+        "endYear": "1987"
+    },
+    {
+        "model": "5",
+        "version": "Berline (E34)",
+        "startYear": "1987",
+        "endYear": "1995"
+    },
+    {
+        "model": "5",
+        "version": "Berline (E39)",
+        "startYear": "1995",
+        "endYear": "2003"
+    },
+    {
+        "model": "5",
+        "version": "Berline (E60)",
+        "startYear": "2001",
+        "endYear": "2010"
+    },
+    {
+        "model": "5",
+        "version": "Berline (F10)",
+        "startYear": "2009",
+        "endYear": "2016"
+    },
+    {
+        "model": "5",
+        "version": "Berline (G30, F90)",
+        "startYear": "2016",
+        "endYear": "N/A"
+    },
+    {
+        "model": "5",
+        "version": "GT (F07)",
+        "startYear": "2009",
+        "endYear": "2017"
+    },
+    {
+        "model": "5",
+        "version": "Touring (E34)",
+        "startYear": "1991",
+        "endYear": "1997"
+    },
+    {
+        "model": "5",
+        "version": "Touring (E39)",
+        "startYear": "1996",
+        "endYear": "2004"
+    },
+    {
+        "model": "5",
+        "version": "Touring (E61)",
+        "startYear": "2004",
+        "endYear": "2010"
+    },
+    {
+        "model": "5",
+        "version": "Touring (F11)",
+        "startYear": "2009",
+        "endYear": "2017"
+    },
+    {
+        "model": "5",
+        "version": "Touring (G31)",
+        "startYear": "2017",
+        "endYear": "N/A"
+    },
+    {
+        "model": "6",
+        "version": "Cabriolet (E64)",
+        "startYear": "2004",
+        "endYear": "2010"
+    },
+    {
+        "model": "6",
+        "version": "Cabriolet (F12)",
+        "startYear": "2011",
+        "endYear": "2018"
+    },
+    {
+        "model": "6",
+        "version": "Coupe (E24)",
+        "startYear": "1975",
+        "endYear": "1989"
+    },
+    {
+        "model": "6",
+        "version": "Coupe (E63)",
+        "startYear": "2004",
+        "endYear": "2010"
+    },
+    {
+        "model": "6",
+        "version": "Coupe (F13)",
+        "startYear": "2010",
+        "endYear": "2017"
+    },
+    {
+        "model": "6",
+        "version": "Gran Coupe (F06)",
+        "startYear": "2011",
+        "endYear": "2018"
+    },
+    {
+        "model": "6",
+        "version": "Gran Turismo (G32)",
+        "startYear": "2017",
+        "endYear": "N/A"
+    },
+    {
+        "model": "7",
+        "version": "(E23)",
+        "startYear": "1977",
+        "endYear": "1988"
+    },
+    {
+        "model": "7",
+        "version": "(E32)",
+        "startYear": "1986",
+        "endYear": "1994"
+    },
+    {
+        "model": "7",
+        "version": "(E38)",
+        "startYear": "1994",
+        "endYear": "2001"
+    },
+    {
+        "model": "7",
+        "version": "(E65, E66, E67)",
+        "startYear": "2001",
+        "endYear": "2009"
+    },
+    {
+        "model": "7",
+        "version": "(F01, F02, F03, F04)",
+        "startYear": "2008",
+        "endYear": "2015"
+    },
+    {
+        "model": "7",
+        "version": "(G11, G12)",
+        "startYear": "2014",
+        "endYear": "N/A"
+    },
+    {
+        "model": "7",
+        "version": "(G70)",
+        "startYear": "2022",
+        "endYear": "N/A"
+    },
+    {
+        "model": "8",
+        "version": "(E31)",
+        "startYear": "1990",
+        "endYear": "1999"
+    },
+    {
+        "model": "8",
+        "version": "Cabriolet (G14, F91)",
+        "startYear": "2018",
+        "endYear": "N/A"
+    },
+    {
+        "model": "8",
+        "version": "Coupe (G15, F92)",
+        "startYear": "2018",
+        "endYear": "N/A"
+    },
+    {
+        "model": "8",
+        "version": "Gran Coupe (G16, F93)",
+        "startYear": "2019",
+        "endYear": "N/A"
+    },
+    {
+        "model": "X1",
+        "version": "(E84)",
+        "startYear": "2009",
+        "endYear": "2015"
+    },
+    {
+        "model": "X1",
+        "version": "(F48)",
+        "startYear": "2014",
+        "endYear": "N/A"
+    },
+    {
+        "model": "X2",
+        "version": "(F39)",
+        "startYear": "2017",
+        "endYear": "N/A"
+    },
+    {
+        "model": "X3",
+        "version": "(E83)",
+        "startYear": "2003",
+        "endYear": "2011"
+    },
+    {
+        "model": "X3",
+        "version": "(F25)",
+        "startYear": "2010",
+        "endYear": "2017"
+    },
+    {
+        "model": "X3",
+        "version": "(G01, F97)",
+        "startYear": "2017",
+        "endYear": "N/A"
+    },
+    {
+        "model": "X4",
+        "version": "(F26)",
+        "startYear": "2013",
+        "endYear": "2018"
+    },
+    {
+        "model": "X4",
+        "version": "(G02, F98)",
+        "startYear": "2018",
+        "endYear": "N/A"
+    },
+    {
+        "model": "X5",
+        "version": "(E53)",
+        "startYear": "2000",
+        "endYear": "2007"
+    },
+    {
+        "model": "X5",
+        "version": "(E70)",
+        "startYear": "2006",
+        "endYear": "2013"
+    },
+    {
+        "model": "X5",
+        "version": "(F15, F85)",
+        "startYear": "2012",
+        "endYear": "2018"
+    },
+    {
+        "model": "X5",
+        "version": "(G05)",
+        "startYear": "2018",
+        "endYear": "N/A"
+    },
+    {
+        "model": "X6",
+        "version": "(E71, E72)",
+        "startYear": "2007",
+        "endYear": "2014"
+    },
+    {
+        "model": "X6",
+        "version": "(F16, F86)",
+        "startYear": "2014",
+        "endYear": "2019"
+    },
+    {
+        "model": "X6",
+        "version": "(G06, F96)",
+        "startYear": "2019",
+        "endYear": "N/A"
+    },
+    {
+        "model": "X7",
+        "version": "(G07)",
+        "startYear": "2019",
+        "endYear": "N/A"
+    },
+    {
+        "model": "Z1",
+        "version": "Roadster (E30)",
+        "startYear": "1988",
+        "endYear": "1991"
+    },
+    {
+        "model": "Z3",
+        "version": "Coupe (E36)",
+        "startYear": "1997",
+        "endYear": "2003"
+    },
+    {
+        "model": "Z3",
+        "version": "Roadster (E36)",
+        "startYear": "1995",
+        "endYear": "2003"
+    },
+    {
+        "model": "Z4",
+        "version": "Coupe (E86)",
+        "startYear": "2006",
+        "endYear": "2009"
+    },
+    {
+        "model": "Z4",
+        "version": "Roadster (E85)",
+        "startYear": "2003",
+        "endYear": "2009"
+    },
+    {
+        "model": "Z4",
+        "version": "Roadster (E89)",
+        "startYear": "2009",
+        "endYear": "2016"
+    },
+    {
+        "model": "Z4",
+        "version": "Roadster (G29)",
+        "startYear": "2019",
+        "endYear": "N/A"
+    },
+    {
+        "model": "Z8",
+        "version": "Roadster (E52)",
+        "startYear": "2000",
+        "endYear": "2003"
+    }
 ]

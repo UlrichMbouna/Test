@@ -1,5 +1,4 @@
 package ulrich_tech.csvforjson.Controllers;
-// controller en minuscule
 
 import ulrich_tech.csvforjson.Model.ModelVersion;
 import ulrich_tech.csvforjson.Services.CsvToJsonService;
@@ -17,7 +16,7 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("api")
 public class CsvToJsonController {
 
     @Autowired
@@ -29,9 +28,8 @@ public class CsvToJsonController {
     public String convertCsvToJson(@RequestParam("file") MultipartFile file) throws IOException, CsvException {
         return csvToJsonService.convertCsvToJson(file);
     }
-     
 
-     @PostMapping("/json-for-csv")
+    @PostMapping("/json-for-csv")
     public ResponseEntity<String> convertJsonToCsv(@RequestParam("file") MultipartFile file) throws IOException {
         String json = new String(file.getBytes());
         String csv = csvToJsonService.convertJsonToCsv(json);
@@ -44,7 +42,15 @@ public class CsvToJsonController {
     }
 
     @GetMapping("/model-version")
-    public List<ModelVersion> diviserListe(@RequestBody JsonNode jsonNode){
+    public List<ModelVersion> diviserListe(@RequestBody JsonNode jsonNode) {
         return modelVersionService.Liste(jsonNode);
+    }
+    @PostMapping("/hey")
+    ModelVersion divise(@RequestBody String text) {
+        return modelVersionService.diviser(text);
+    }
+    @GetMapping("/hello")
+    public String affiche() {
+        return "hello";
     }
 }

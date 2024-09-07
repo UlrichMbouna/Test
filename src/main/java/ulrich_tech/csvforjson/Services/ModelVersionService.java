@@ -15,7 +15,7 @@ import ulrich_tech.csvforjson.Model.ModelVersion;
 @Service
 public class ModelVersionService {
 
-    public ModelVersion diviser(String text) {
+        public ModelVersion diviser(String text) {
         int a = text.indexOf(" ");
         int b = text.lastIndexOf('(');
         int c = text.lastIndexOf(')');
@@ -26,18 +26,19 @@ public class ModelVersionService {
 
         int firstYearStart = b3.indexOf('.') + 1;
         int firstYearEnd = firstYearStart + 4;
-        int secondYearStart = b3.indexOf('-') + 2;
+        int secondYearStart = b3.indexOf('-') + 2;//2
+        int sp = b3.indexOf('.',secondYearStart);
 
-        String D1 = b3.substring(firstYearStart, firstYearEnd);
+        int D1 = Integer.parseInt(  b3.substring(firstYearStart, firstYearEnd) );
 
-        String D2 = "N/A";
+        int D2 = Integer.parseInt( "N/A");
 
         // Vérifier si une deuxième année est présente et extraire si disponible
-        if (secondYearStart > 1 && secondYearStart + 4 <= b3.length()) {
-            D2 = b3.substring(secondYearStart, secondYearStart + 4);
+        if (sp != -1 && sp + 4 <= b3.length()) {
+            D2 = Integer.parseInt(  b3.substring(sp+1, sp+5) );
         } else {
 
-            D2 = "N/A";
+            D2 = 0;
         }
 
         ModelVersion division = new ModelVersion(b1, b2, D1, D2);
