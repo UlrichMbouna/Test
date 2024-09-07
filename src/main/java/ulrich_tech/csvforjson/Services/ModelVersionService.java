@@ -1,15 +1,16 @@
-package ulrich_tech.csvforjson.Services;
+package ulrich_tech.csvforjson.services;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
+import org.slf4j.helpers.Util;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
-
-import ulrich_tech.csvforjson.Model.ModelVersion;
+import ulrich_tech.csvforjson.constants.UtilConstants;
+import ulrich_tech.csvforjson.models.ModelVersion;
 
 @AllArgsConstructor
 @Service
@@ -20,8 +21,8 @@ public class ModelVersionService {
         int b = text.lastIndexOf('(');
         int c = text.lastIndexOf(')');
 
-        String b1 = text.substring(0, a).trim();
-        String b2 = text.substring(a + 1, b).trim();
+        String model = text.substring(0, a).trim();
+        String version = text.substring(a + 1, b).trim();
         String b3 = text.substring(b + 1, c).trim();
 
         int firstYearStart = b3.indexOf('.') + 1;
@@ -29,24 +30,17 @@ public class ModelVersionService {
         int secondYearStart = b3.indexOf('-') + 2;//2
         int sp = b3.indexOf('.',secondYearStart);
 
-        int D1 = Integer.parseInt(  b3.substring(firstYearStart, firstYearEnd) );
+        int startYear = Integer.parseInt(  b3.substring(firstYearStart, firstYearEnd) );
+        
 
-        int D2 = Integer.parseInt( "N/A");
+        int endYear = (sp != -1 && sp + 4 <= b3.length()) ?  Integer.parseInt(  b3.substring(sp+1, sp+5) ) : UtilConstants.DEFAULT_END_YEAR ;
 
-        // Vérifier si une deuxième année est présente et extraire si disponible
-        if (sp != -1 && sp + 4 <= b3.length()) {
-            D2 = Integer.parseInt(  b3.substring(sp+1, sp+5) );
-        } else {
-
-            D2 = 0;
-        }
-
-        ModelVersion division = new ModelVersion(b1, b2, D1, D2);
+        ModelVersion division = new ModelVersion(model, version, startYear, endYear);
 
         return division;
     }
 
-    public List<ModelVersion> Liste (JsonNode jsonNode) {
+    public List<ModelVersion> convertirEnListe (JsonNode jsonNode) {
 
         List<String> names = new ArrayList<>();
         // Parcourir chaque modèle

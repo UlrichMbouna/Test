@@ -1,4 +1,4 @@
-package ulrich_tech.csvforjson.Services;
+package ulrich_tech.csvforjson.services;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;

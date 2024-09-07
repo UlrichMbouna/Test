@@ -1,8 +1,8 @@
-package ulrich_tech.csvforjson.Controllers;
+package ulrich_tech.csvforjson.controllers;
 
-import ulrich_tech.csvforjson.Model.ModelVersion;
-import ulrich_tech.csvforjson.Services.CsvToJsonService;
-import ulrich_tech.csvforjson.Services.ModelVersionService;
+import ulrich_tech.csvforjson.models.ModelVersion;
+import ulrich_tech.csvforjson.services.CsvToJsonService;
+import ulrich_tech.csvforjson.services.ModelVersionService;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.opencsv.exceptions.CsvException;
@@ -43,14 +43,6 @@ public class CsvToJsonController {
 
     @GetMapping("/model-version")
     public List<ModelVersion> diviserListe(@RequestBody JsonNode jsonNode) {
-        return modelVersionService.Liste(jsonNode);
-    }
-    @PostMapping("/hey")
-    ModelVersion divise(@RequestBody String text) {
-        return modelVersionService.diviser(text);
-    }
-    @GetMapping("/hello")
-    public String affiche() {
-        return "hello";
+        return modelVersionService.convertirEnListe(jsonNode);
     }
 }

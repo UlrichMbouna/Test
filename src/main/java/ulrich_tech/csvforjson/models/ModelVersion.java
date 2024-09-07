@@ -1,4 +1,4 @@
-package ulrich_tech.csvforjson.Model;
+package ulrich_tech.csvforjson.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +13,7 @@ public class ModelVersion {
 
     private String model;
     private String version;
-    private String startYear;
-    private String endYear;
+    private int startYear;
+    private int endYear;
 
 }
