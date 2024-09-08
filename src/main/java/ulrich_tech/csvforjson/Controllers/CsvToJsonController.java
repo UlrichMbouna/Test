@@ -31,7 +31,10 @@ public class CsvToJsonController {
 
     @PostMapping("/json-for-csv")
     public ResponseEntity<String> convertJsonToCsv(@RequestParam("file") MultipartFile file) throws IOException {
-        String json = new String(file.getBytes());
+
+        String json = new String(file.getBytes(), "UTF-8");
+       // System.out.println("entree = " + row );
+
         String csv = csvToJsonService.convertJsonToCsv(json);
 
         HttpHeaders headers = new HttpHeaders();
@@ -43,6 +46,26 @@ public class CsvToJsonController {
 
     @GetMapping("/model-version")
     public List<ModelVersion> diviserListe(@RequestBody JsonNode jsonNode) {
+
         return modelVersionService.convertirEnListe(jsonNode);
     }
-}
+
+    @PostMapping("/make-json-to-model-version-csv")
+    public ResponseEntity<String> convertMakeJsonToCsv(@RequestParam("file") MultipartFile file) throws IOException {
+
+        String baseMakeJsonAsString = new String(file.getBytes(), "UTF-8");
+
+
+
+        String listModel = modelVersionService.convertirMakeToModelversionString(baseMakeJsonAsString);
+
+
+        String stringCsv = csvToJsonService.convertJsonToCsv(listModel);
+
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "text/csv");
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"output.csv\"");
+
+        return ResponseEntity.ok().headers(headers).body(stringCsv);
+    }}

@@ -10,7 +10,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ModelVersion {
-
+    private int versionId;
     private String model;
     private String version;
     private int startYear;

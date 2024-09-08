@@ -1,11 +1,13 @@
 package ulrich_tech.csvforjson.services;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
-import org.slf4j.helpers.Util;
 import org.springframework.stereotype.Service;
 
 import lombok.AllArgsConstructor;
@@ -16,7 +18,9 @@ import ulrich_tech.csvforjson.models.ModelVersion;
 @Service
 public class ModelVersionService {
 
-        public ModelVersion diviser(String text) {
+    private final ObjectMapper objectMapper = new ObjectMapper();
+
+        public ModelVersion diviser(int versionId, String text) {
         int a = text.indexOf(" ");
         int b = text.lastIndexOf('(');
         int c = text.lastIndexOf(')');
@@ -35,7 +39,7 @@ public class ModelVersionService {
 
         int endYear = (sp != -1 && sp + 4 <= b3.length()) ?  Integer.parseInt(  b3.substring(sp+1, sp+5) ) : UtilConstants.DEFAULT_END_YEAR ;
 
-        ModelVersion division = new ModelVersion(model, version, startYear, endYear);
+        ModelVersion division = new ModelVersion(versionId, model, version, startYear, endYear);
 
         return division;
     }
@@ -43,16 +47,50 @@ public class ModelVersionService {
     public List<ModelVersion> convertirEnListe (JsonNode jsonNode) {
 
         List<String> names = new ArrayList<>();
+        List<Integer> ids = new ArrayList<>();
         // Parcourir chaque modèle
         for (JsonNode model : jsonNode.get("models")) {
             // Parcourir chaque option de chaque modèle
             for (JsonNode option : model.get("options")) {
                 // Ajouter la valeur de "name" à la liste
                 names.add(option.get("name").asText());
+                ids.add(option.get("id").asInt());
+
             }
         }
+        
+        List <ModelVersion> resultat = new ArrayList<>() ;
+        int i = 0;
+        int total= names.size();
+        while (i<total) {
+            ModelVersion ver = new ModelVersion();
+            ver= diviser(ids.get(i), names.get(i));
+            resultat.add(ver);
+            i++;
+        }
+        return resultat;
+        //return res.stream().map(this::diviser).collect(Collectors.toList());
+    }
 
-        return names.stream().map(this::diviser).collect(Collectors.toList());
+    public List<ModelVersion> convertirMakeToModelversion (String baseMakeJsonAsString) throws JsonMappingException, JsonProcessingException{
+
+        JsonNode json = objectMapper.readTree(baseMakeJsonAsString);
+
+        List<ModelVersion> listModel = convertirEnListe ( json) ;
+
+        return listModel; 
+    }
+
+    public String convertirMakeToModelversionString (String baseMakeJsonAsString) throws JsonMappingException, JsonProcessingException{
+
+        JsonNode json = objectMapper.readTree(baseMakeJsonAsString);
+        
+
+        List<ModelVersion> listModel = convertirEnListe ( json) ;
+
+        String jsonString = objectMapper.writeValueAsString(listModel);
+
+        return jsonString; 
     }
 
 }

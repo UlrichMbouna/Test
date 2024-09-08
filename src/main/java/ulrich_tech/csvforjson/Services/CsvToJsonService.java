@@ -2,7 +2,11 @@ package ulrich_tech.csvforjson.services;
 
 import com.opencsv.CSVReader;
 import com.opencsv.exceptions.CsvException;
+
+import ulrich_tech.csvforjson.models.ModelVersion;
+
 import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.apache.commons.csv.CSVFormat;
@@ -83,6 +87,8 @@ public class CsvToJsonService {
     }
 
     public String convertJsonToCsv(String json) throws IOException {
+
+        System.out.println("entree = " + json );
         // Lire les données JSON à partir de la chaîne.
         List<Map<String, String>> jsonData = objectMapper.readValue(
                 json, new TypeReference<List<Map<String, String>>>() {
@@ -90,11 +96,17 @@ public class CsvToJsonService {
 
         // Créer un écrivain pour le CSV.
         StringWriter csvWriter = new StringWriter();
+
+
         try (CSVPrinter csvPrinter = new CSVPrinter(csvWriter, CSVFormat.DEFAULT.withHeader(getHeaders(jsonData)))) {
+
             // Écrire chaque ligne du JSON en tant que ligne CSV.
             for (Map<String, String> row : jsonData) {
+                //System.out.println("entree = " + row );
                 csvPrinter.printRecord(row.values());
+               // System.out.println("sortie = " + csvPrinter);
             }
+
         }
 
         return csvWriter.toString();
@@ -106,5 +118,8 @@ public class CsvToJsonService {
             return new String[0];
         }
         return jsonData.get(0).keySet().toArray(new String[0]);
-    }
+    };
+
+    
+
 }
