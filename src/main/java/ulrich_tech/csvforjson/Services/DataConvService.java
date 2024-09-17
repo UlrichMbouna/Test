@@ -23,7 +23,7 @@ import java.util.List;
 import java.util.Map;
 
 @Service
-public class CsvToJsonService {
+public class DataConvService {
 
     // Création d'une instance d'ObjectMapper pour convertir les données en JSON.
     private final ObjectMapper objectMapper = new ObjectMapper();

@@ -1,7 +1,7 @@
 package ulrich_tech.csvforjson.controllers;
 
 import ulrich_tech.csvforjson.models.ModelVersion;
-import ulrich_tech.csvforjson.services.CsvToJsonService;
+import ulrich_tech.csvforjson.services.DataConvService;
 import ulrich_tech.csvforjson.services.ModelVersionService;
 
 import com.fasterxml.jackson.databind.JsonNode;
@@ -20,22 +20,22 @@ import java.util.List;
 public class CsvToJsonController {
 
     @Autowired
-    private CsvToJsonService csvToJsonService;
+    private DataConvService dataConvService;
     @Autowired
     private ModelVersionService modelVersionService;
 
     @PostMapping("/csv-for-json")
     public String convertCsvToJson(@RequestParam("file") MultipartFile file) throws IOException, CsvException {
-        return csvToJsonService.convertCsvToJson(file);
+        return dataConvService.convertCsvToJson(file);
     }
 
     @PostMapping("/json-for-csv")
     public ResponseEntity<String> convertJsonToCsv(@RequestParam("file") MultipartFile file) throws IOException {
 
         String json = new String(file.getBytes(), "UTF-8");
-       // System.out.println("entree = " + row );
+        // System.out.println("entree = " + row );
 
-        String csv = csvToJsonService.convertJsonToCsv(json);
+        String csv = dataConvService.convertJsonToCsv(json);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE, "text/csv");
@@ -55,17 +55,45 @@ public class CsvToJsonController {
 
         String baseMakeJsonAsString = new String(file.getBytes(), "UTF-8");
 
-
-
         String listModel = modelVersionService.convertirMakeToModelversionString(baseMakeJsonAsString);
 
-
-        String stringCsv = csvToJsonService.convertJsonToCsv(listModel);
-
+        String stringCsv = dataConvService.convertJsonToCsv(listModel);
 
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE, "text/csv");
         headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"output.csv\"");
 
         return ResponseEntity.ok().headers(headers).body(stringCsv);
-    }}
+    }
+    
+   /* @PostMapping("/version-json-to-version-version-csv")
+    public ResponseEntity<String> convertMakeJsonToCsv(@RequestParam("file") MultipartFile file) throws IOException {
+
+        String baseMakeJsonAsString = new String(file.getBytes(), "UTF-8");
+
+        String listModel = modelVersionService.convertirMakeToModelversionString(baseMakeJsonAsString);
+
+        String stringCsv = dataConvService.convertJsonToCsv(listModel);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "text/csv");
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"output.csv\"");
+
+        return ResponseEntity.ok().headers(headers).body(stringCsv);
+    } */
+   @PostMapping("/version-engines-json-to-engines-csv")
+    public ResponseEntity<String> convertVersionEngines(@RequestParam("file") MultipartFile file) throws IOException {
+
+        String baseVersionEnginesJsonAsString = new String(file.getBytes(), "UTF-8");
+
+        String listEngines = modelVersionService.convertirVersionEnginesToEngines(baseVersionEnginesJsonAsString);
+
+        String stringCsv = dataConvService.convertJsonToCsv(listEngines);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.add(HttpHeaders.CONTENT_TYPE, "text/csv");
+        headers.add(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"output.csv\"");
+
+        return ResponseEntity.ok().headers(headers).body(stringCsv);
+    } 
+}
