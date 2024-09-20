@@ -179,12 +179,12 @@ public class ModelVersionService {
 
         switch (fuel) {
             case "Essence":{
-                fuelType = CarFuelType.PETROL;
+                fuelType = CarFuelType.GASOLINE;
                 break;
             }
                 
             case "Essence/électrique":{
-                fuelType = CarFuelType.PETROL_ELECTRIC;
+                fuelType = CarFuelType.GASOLINE_ELECTRIC;
                 break;
             }
             case "Diesel":{
@@ -193,6 +193,22 @@ public class ModelVersionService {
             }
             case "Diesel/électrique":{
                 fuelType = CarFuelType.DIESEL_ELECTRIC;
+                break;
+            }
+            case "Éléctrique":{
+                fuelType = CarFuelType.ELECTRIC;
+                break;
+            }
+            case "éléctrique":{
+                fuelType = CarFuelType.ELECTRIC;
+                break;
+            }
+            case "Essence / éthanol":{
+                fuelType = CarFuelType.GASOLINE_ETHANOL;
+                break;
+            }
+            case "Essence / gaz combustible liquéfié (GPL)":{
+                fuelType = CarFuelType.GASOLINE_GPL;
                 break;
             }
             default:

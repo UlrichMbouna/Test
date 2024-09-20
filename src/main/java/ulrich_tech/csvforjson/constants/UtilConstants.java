@@ -10,8 +10,10 @@ public class UtilConstants {
         DIESEL_ELECTRIC,
         ELECTRIC,
         HYBRID,
-        PETROL,
-        PETROL_ELECTRIC,
+        GASOLINE,
+        GASOLINE_ELECTRIC,
+        GASOLINE_ETHANOL,
+        GASOLINE_GPL,
         OTHER  
     }
     

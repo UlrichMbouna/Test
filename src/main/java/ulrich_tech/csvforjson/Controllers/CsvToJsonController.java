@@ -54,10 +54,12 @@ public class CsvToJsonController {
     public ResponseEntity<String> convertMakeJsonToCsv(@RequestParam("file") MultipartFile file) throws IOException {
 
         String baseMakeJsonAsString = new String(file.getBytes(), "UTF-8");
+        //System.out.println("baseVersion:" + baseMakeJsonAsString);
 
         String listModel = modelVersionService.convertirMakeToModelversionString(baseMakeJsonAsString);
 
         String stringCsv = dataConvService.convertJsonToCsv(listModel);
+        //String stringCsv = "hello";
 
         HttpHeaders headers = new HttpHeaders();
         headers.add(HttpHeaders.CONTENT_TYPE, "text/csv");
@@ -85,6 +87,7 @@ public class CsvToJsonController {
     public ResponseEntity<String> convertVersionEngines(@RequestParam("file") MultipartFile file) throws IOException {
 
         String baseVersionEnginesJsonAsString = new String(file.getBytes(), "UTF-8");
+        //System.out.println("baseVersion:" + baseVersionEnginesJsonAsString);
 
         String listEngines = modelVersionService.convertirVersionEnginesToEngines(baseVersionEnginesJsonAsString);
 
